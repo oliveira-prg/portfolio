@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio</title>
+  <style>
+    /* Estilo geral */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    /* Navegação */
+    nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #FFD700;
+    }
+
+    /* Seções */
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    /* Estilo dos projetos */
+    .projeto {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .projeto img {
+      max-width: 80%;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .projeto img:hover {
+      transform: scale(1.05);
+    }
+
+    .legenda {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* Certificados */
+    .certificado {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificado .logo {
+      width: 60px;
+      height: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .certificado .info {
+      flex-grow: 1;
+    }
+
+    .certificado h3 {
+      margin: 0 0 0.5rem 0;
+      color: #333;
+    }
+
+    .certificado p {
+      margin: 0.3rem 0;
+    }
+
+    .certificado a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .certificado a:hover {
+      text-decoration: underline;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .projeto img {
+        max-width: 30%;
+      }
+
+      .certificado {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .certificado .logo {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Olá, bem vindo!!</h1>
+  </header>
+
+  <nav>
+    <a id="tabSobre" class="active">Sobre Mim</a>
+    <a id="tabProjetos">Projetos</a>
+    <a id="tabCertificacoes">Certificações</a>
+    <a id="tabContato">Contato</a>
+  </nav>
+
+  <section id="sobre" class="active">
+    <h2>Sobre Mim</h2>
+    <p>Sou um estudante de programação interessado em aprender e desenvolver soluções usando linguagens como Python, C, HTML, JavaScript e CSS. Gosto de criar projetos simples que resolvam problemas do dia a dia.</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+  
+    <div class="projeto">
+      <img src="https://media.licdn.com/dms/image/v2/D4E22AQGqunh3_uZC9w/feedshare-shrink_2048_1536/B4EZXLjPfHGYAo-/0/1742876769698?e=1749081600&v=beta&t=MEP3rTt6Xwa7cJMNJg-ulD3vAlmYoq3v9AItSlwVskw" alt="Parte 1 do jogo Pedra, Papel e Tesoura">
+      <div class="legenda">Parte 1 do jogo Pedra, Papel e Tesoura em Python.</div>
+    </div>
+  
+    <div class="projeto">
+      <img src="https://media.licdn.com/dms/image/v2/D4E22AQFoe3X_E-J8vg/feedshare-shrink_1280/B4EZXLjPe7G0Ak-/0/1742876769538?e=1749081600&v=beta&t=oky6g-8c3O3JH_Eu4PtqZ7h6637zsyCra--xn_Pzbpk" alt="Parte 2 do jogo Pedra, Papel e Tesoura">
+      <div class="legenda">Parte 2 do jogo Pedra, Papel e Tesoura em python</div>
+    </div>
+
+    <div class ="projeto">
+        <img src ="https://media.licdn.com/dms/image/v2/D4E22AQEhc3PUdBgAUw/feedshare-shrink_2048_1536/B4EZXLjPfSH0Aw-/0/1742876769600?e=1749081600&v=beta&t=rr1DIYu7QBfq4nMh6g7D7r1DdzzbtBS-gmm8XOxd5KA" alt ="Parte 3 do jogo Pedra, Papel e Tesoura">
+        <div class ="legenda">Parte 3 do jogo Pedra, Papel e Tesoura em python</div>
+    </div>
+  
+    <div class="projeto">
+      <img src="https://media.licdn.com/dms/image/v2/D4D22AQGggqvwJhI7QQ/feedshare-shrink_800/B4DZYDgw6qH4Ag-/0/1743815651837?e=1749081600&v=beta&t=NUkdu4Xrnx4ekTH3Yu-pZ9q6ekWv4Z9BNV1EcgQE2vs" alt="Conversor de Temperatura">
+      <div class="legenda">Conversor de temperatura em C com interface gráfica simples.</div>
+    </div>
+  
+    <div class="projeto">
+      <img src="https://media.licdn.com/dms/image/v2/D4D22AQEHvOVqgPMEDA/feedshare-shrink_800/B4DZX5_E5qG4Ag-/0/1743655820182?e=1749081600&v=beta&t=u63k68Bfh-xqrWVGMkGTULak5mQJFpSlgxGktmZTvMw" alt="Jogo da Forca em Python">
+      <div class="legenda">Conversor de moedas em C.</div>
+    </div>
+  
+    <div class="projeto">
+      <img src="https://media.licdn.com/dms/image/v2/D4D22AQH0qavonRJ39w/feedshare-shrink_800/B4DZYoCKMNGkAg-/0/1744428377941?e=1749081600&v=beta&t=BpTBuB8I40ZrsTny7ewz4p0DRfnzYHrZbfLfAJWXNI0" alt="Calculadora Simples">
+      <div class="legenda">Calculadora simples em C com funções básicas de soma, subtração, multiplicação e divisão.</div>
+    </div>
+  </section>
+  
+  <section id="certificacoes">
+    <h2>Certificações</h2>
+
+    <div class="certificado">
+      <img src="https://media.licdn.com/dms/image/v2/C4D0BAQHpt3vqxrmqig/company-logo_100_100/company-logo_100_100/0/1631342511273?e=1752105600&v=beta&t=In91wdcKteGFVVisvEMQPd5ZLKFxhzSF6GaK71F4ZbQ" alt="Logo FGV" class="logo">
+      <div class="info">
+        <h3>Certificação em Introdução ao Git e Github</h3>
+        <p><strong>Instituição:</strong> FGV</p>
+        <p><strong>Data:</strong> Abril de 2025</p>
+        <p><a href="https://media.licdn.com/dms/image/v2/D4D2DAQFvdoQmFitAIw/profile-treasury-document-cover-images_480/B4DZZZOqOzG8Aw-/0/1745253739136?e=1746939600&v=beta&t=S5ivQ3-YwkZyz60mGxjL2dbP0rNeLvkHiYeaTBQnfb0" target="_blank">Ver Certificado</a></p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHo1GZmhutd4A/company-logo_100_100/company-logo_100_100/0/1664308284303/betrybe_logo?e=1752105600&v=beta&t=qMZGJDVT-i8XhjQTV34YtoyMv5cI8A6yxV2hggutmrk" alt="Logo Trybe" class="logo">
+      <div class="info">
+        <h3>Certificação em Introdução à Programação</h3>
+        <p><strong>Instituição:</strong> Trybe</p>
+        <p><strong>Data:</strong> Abril de 2025</p>
+        <p><a href="https://media.licdn.com/dms/image/v2/D4D2DAQGO2j5So8oe2Q/profile-treasury-document-cover-images_480/B4DZXbBR0lG4Aw-/0/1743136308260?e=1746939600&v=beta&t=rYgNR0_FGJucZY92PUH1zECbkXSB08eIC67nhd84blE" target="_blank">Ver Certificado</a></p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHbRU5HNC8kOA/company-logo_100_100/company-logo_100_100/0/1701098269536/santander_universidades_logo?e=1752105600&v=beta&t=1p70y-cBcNUwwBqYo6J0s311qoPYFo__6YkMgWrrv6U" alt="Logo Santander" class="logo">
+      <div class="info">
+        <h3>Excel: do Básico ao Avançado</h3>
+        <p><strong>Instituição:</strong> Santander Open Academy</p>
+        <p><strong>Data:</strong> Março de 2025</p>
+        <p><a href="https://media.licdn.com/dms/image/v2/D4D2DAQFG9K2j5W0Dlw/profile-treasury-document-cover-images_480/B4DZXa_6dbHkA0-/0/1743135944653?e=1746939600&v=beta&t=-htVtZrY8hsSeu5ZUpEGjblu0JoSJ0RNstCVATNBXtw" target="_blank">Ver Certificado</a></p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHbRU5HNC8kOA/company-logo_100_100/company-logo_100_100/0/1701098269536/santander_universidades_logo?e=1752105600&v=beta&t=1p70y-cBcNUwwBqYo6J0s311qoPYFo__6YkMgWrrv6U" alt="Logo Santander" class="logo">
+      <div class="info">
+        <h3>Introdução à Programação em Python</h3>
+        <p><strong>Instituição:</strong> Santander Open Academy</p>
+        <p><strong>Data:</strong> Fevereiro de 2025</p>
+        <p><a href="https://media.licdn.com/dms/image/v2/D4D2DAQHvBjwDY0yEQQ/profile-treasury-document-cover-images_480/B4DZXY18N2G4A0-/0/1743099776414?e=1746939600&v=beta&t=4mwErfQ9MAB4QAGoN7xZNTy6F8ecny7c1NakI2gODMY" target="_blank">Ver Certificado</a></p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHbRU5HNC8kOA/company-logo_100_100/company-logo_100_100/0/1701098269536/santander_universidades_logo?e=1752105600&v=beta&t=1p70y-cBcNUwwBqYo6J0s311qoPYFo__6YkMgWrrv6U" alt="Logo Santander" class="logo">
+      <div class="info">
+        <h3>Certificação em Power BI</h3>
+        <p><strong>Instituição:</strong> Santander Open Academy</p>
+        <p><strong>Data:</strong> Março de 2025</p>
+        <p><a href="https://media.licdn.com/dms/image/v2/D4D2DAQEpKqYqPv6Bzg/profile-treasury-document-cover-images_480/B4DZXa_pRTHsA0-/0/1743135874588?e=1746939600&v=beta&t=PlRPcMZoIj4XsTPQBf2RMrtUJBuUabWXE1PESAkpGmQ" target="_blank">Ver Certificado</a></p>
+      </div>
+    </div>
+
+    <div class="certificado">
+      <img src="https://media.licdn.com/dms/image/v2/D4D0BAQHbRU5HNC8kOA/company-logo_100_100/company-logo_100_100/0/1701098269536/santander_universidades_logo?e=1752105600&v=beta&t=1p70y-cBcNUwwBqYo6J0s311qoPYFo__6YkMgWrrv6U" alt="Logo Santander" class="logo">
+      <div class="info">
+        <h3>Fundamentos do ChatGPT</h3>
+        <p><strong>Instituição:</strong> Santander Open Academy</p>
+        <p><strong>Data:</strong> Março de 2025</p>
+        <p><a href="https://media.licdn.com/dms/image/v2/D4D2DAQFT7BETb3fSnw/profile-treasury-document-cover-images_480/B4DZXbA72rHkAw-/0/1743136212187?e=1746939600&v=beta&t=uzxHVdaoZYIc2dBPyHrF2AQ6lgeB8_47jd6wjuFSkkg" target="_blank">Ver Certificado</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Você pode entrar em contato comigo pelo e-mail: <strong>barretomatheus128@gmail.com</strong></p>
+    <p>Ou acesse meu <a href="https://linktr.ee/matheusdev__" target="_blank">Linktree</a> para mais informações.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Matheus Barreto</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        const target = e.target.id.replace('tab', '').toLowerCase();
+
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+
+        tabs.forEach(t => t.classList.remove('active'));
+        e.target.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
